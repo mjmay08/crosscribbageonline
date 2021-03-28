@@ -1,7 +1,7 @@
 {
 "companyName": "Mitchell May",
 "productName": "Cross Cribbage",
-"productVersion": "2.0",
+"productVersion": "2.3",
 "dataUrl": "HTML.data.unityweb",
 "wasmCodeUrl": "HTML.wasm.code.unityweb",
 "wasmFrameworkUrl": "HTML.wasm.framework.unityweb",
@@ -12,5 +12,5 @@
 "cacheControl": {"default": "must-revalidate"},
 "developmentBuild": false,
 "multithreading": false,
-"unityVersion": "2019.4.20f1"
+"unityVersion": "2019.4.22f1"
 }
