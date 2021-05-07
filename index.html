@@ -2,6 +2,7 @@
 <html lang="en-us">
 
   <head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta 
@@ -12,13 +13,32 @@
 	<link rel="shortcut icon" type="image/png" href="logo.png"/>
     <script src="Build/UnityLoader.js"></script>
     <script>
-    var unityInstance = UnityLoader.instantiate("unityContainer", "Build/HTML.json");
+		document.addEventListener("DOMContentLoaded", theDomHasLoaded, false);
+		function theDomHasLoaded(e) {
+			if (UnityLoader.SystemInfo.mobile) {
+				console.log('a');
+				var x = document.getElementById("mobileWarning");
+				x.style.display = "block";
+				var y = document.getElementById("unityContainer");
+				y.style.display = "none";
+			} else {
+				console.log('b');
+				var unityInstance = UnityLoader.instantiate("unityContainer", "Build/HTML.json");
+				var x = document.getElementById("unityContainer");
+				x.style.display = "block";
+				var y = document.getElementById("mobileWarning");
+				y.style.display = "none";
+			}
+		}
     </script>
   </head>
   
-  <body>
-    <div style="width: 56.25vh; height: 100vh; margin: auto;">
-      <div id="unityContainer" style="width: 90%; height: 90%; margin: auto;"></div>
+  <body style="background-color: black; color: white; font-size: 24px;">
+    <div style="width: 56.25vh; height: 100vh; margin: auto; max-width: 100%;">
+      <div id="unityContainer" style="display: none; width: 90%; height: 90%; margin: auto;"></div>
+	  <div id="mobileWarning" style="display: none;">
+			The browser version of this game is not supported on mobile browsers. Please use the links below to download the app and play!
+	  </div>
       <div style="height: 100px; width: 90%; margin-right: 10%; display: flex; justify-content: center;">
         <a href='https://play.google.com/store/apps/details?id=com.MitchellMay.CrossCribbage&hl=en_US&gl=US&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1'>
           <img style="height: 80px; width: auto;" alt='Get it on Google Play' src='AndroidBadge.png'/>
