@@ -21,6 +21,8 @@
 				x.style.display = "block";
 				var y = document.getElementById("unityContainer");
 				y.style.display = "none";
+				var z = document.getElementById("appLinks");
+				y.style.margin = "auto";
 			} else {
 				console.log('b');
 				var unityInstance = UnityLoader.instantiate("unityContainer", "Build/HTML.json");
@@ -39,7 +41,7 @@
 	  <div id="mobileWarning" style="display: none;">
 			The browser version of this game is not supported on mobile browsers. Please use the links below to download the app and play!
 	  </div>
-      <div style="height: 100px; width: 90%; margin-right: 10%; display: flex; justify-content: center;">
+      <div id="appLinks" style="min-height: 100px; width: 90%; margin-right: 10%; display: flex; flex-wrap: wrap; justify-content: center;">
         <a href='https://play.google.com/store/apps/details?id=com.MitchellMay.CrossCribbage&hl=en_US&gl=US&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1'>
           <img style="height: 80px; width: auto;" alt='Get it on Google Play' src='AndroidBadge.png'/>
               </a>
