@@ -15,6 +15,9 @@
     <script>
 		document.addEventListener("DOMContentLoaded", theDomHasLoaded, false);
 		function theDomHasLoaded(e) {
+      if (window.location.hostname.indexOf("crosscribbage.online") > 0) {
+        alert("This site is being moved to: https://mjmay08.github.io/crosscribbageonline in a few days. Please save this new URL.");
+      }
 			if (UnityLoader.SystemInfo.mobile) {
 				console.log('a');
 				var x = document.getElementById("mobileWarning");
